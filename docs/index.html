@@ -291,7 +291,7 @@
                       Vestibulum placerat dictum felis a accumsan. Duis feugiat rutrum tellus quis eleifend. <a href="" class="btn btn-default btn-xs btn-round">Baca Selengkapnya</a></p>
               </div>
               <div class="box-footer">
-                  <small class="text-muted"> <i class="fa fa-clock-o"></i> {{ now('d m y')->translatedFormat('d F Y') }} </small>
+                  <small class="text-muted"> <i class="fa fa-clock-o"></i> 9 Desamber 2020 </small>
                   <small class="text-muted"><i class="fa fa-user-o fa-xs"></i> Administrator </small>
                   <small class="text-muted"><i class="fa fa-comments-o"></i> 0 </small>
                   <small class="text-muted"><i class="fa fa-eye"></i> 10 </small>
@@ -366,7 +366,7 @@
   <!-- /.box-body -->
   
       <div class="box-footer">
-          <a href="{{ route('sistem-komplain.komplain-sukses') }}" class="footer">Lihat Semua</a>
+          <a href="" class="footer">Lihat Semua</a>
       </div>
   
 </div>
@@ -379,28 +379,13 @@
         </div>
         <br>
             <ul class="timeline">
-                @if(count($events) > 0)
-                    @foreach($events as $key => $event)
-                        @foreach($event as $value)
                         <li>
                             <i class="fa fa-calendar @if($value->status=='OPEN') bg-maroon @else bg-gray @endif"></i>
                             <div class="timeline-item">
-                                <h3 class="timeline-header"><a href="#">{{ strtoupper($value->event_name) }}</a></h3>
-                                <small class="text-yellow"><i class="fa fa-clock-o"></i> {{ Carbon\Carbon::parse($value->start)->translatedFormat('d F Y') }}</small>
+                                <h3 class="timeline-header"><a href="#">Bakti Sosial</a></h3>
+                                <small class="text-yellow"><i class="fa fa-clock-o"></i>2 Januari 2020</small>
                             </div>
                         </li>
-                        @endforeach
-                    @endforeach
-                @else
-                    <li class="time-label">
-                        <span class="bg-gray">
-                            Event tidak tersedia.
-                        </span>
-                    </li>
-                @endif
-                    {{-- <li>
-                        <i class="fa fa-clock-o bg-gray"></i>
-                    </li> --}}
                 </ul>
         
         </div>
@@ -411,9 +396,9 @@
         </div>
            <div class="pad text-bold bg-white" >
             <ul class="nav">
-                <li>Hari Ini <span class="pull-right badge bg-blue">{{ Counter::allVisitors(1) }} Kunjungan</span> </li>
-                <li>7 hari yang lalu <span class="pull-right badge bg-aqua">{{ Counter::allVisitors(7) }} Kunjungan</span> </li>
-                <li>Total <span class="pull-right badge bg-red">{{ Counter::allVisitors() }} Kunjungan</span> </li>
+                <li>Hari Ini <span class="pull-right badge bg-blue">1 Kunjungan</span> </li>
+                <li>7 hari yang lalu <span class="pull-right badge bg-aqua">5 Kunjungan</span> </li>
+                <li>Total <span class="pull-right badge bg-red">1000 Kunjungan</span> </li>
               </ul>
             </div>
         <!-- /.col -->
