@@ -220,6 +220,8 @@
 <div class="dk-line">
   <i class="fa fa-globe fa-lg"></i>
 </div>
+<!-- Full Width Column -->
+<div class="content-wrapper">
 <div id="main-service" class="container">
   <div class="col-md-3 col-sm-3">
       <div class="service-item">
@@ -238,7 +240,7 @@
               <i class="fa fa-certificate"></i>
           </div><!-- /service-item-icon -->
           <!-- service-item-title -->
-          <h4><a href="#">Prestasi {{ $nama_wilayah }}</a></h4>
+          <h4><a href="#">Prestasi</a></h4>
       </div>
   </div>
   <div class="col-md-3 col-sm-3">
@@ -248,7 +250,7 @@
               <i class="fa fa-tree"></i>
           </div><!-- /service-item-icon -->
           <!-- service-item-title -->
-          <h4><a href="#">Wisata Ke {{ $nama_wilayah }}</a></h4>
+          <h4><a href="#">Wisata</a></h4>
       </div>
   </div>
   <div class="col-md-3 col-sm-3">
@@ -262,34 +264,106 @@
       </div>
   </div>
 </div>
-  <!-- Full Width Column -->
-  <div class="content-wrapper">
+  
     <div class="container">
       <!-- Main content -->
       <section class="content">
-        <div class="callout callout-info">
-          <h4>Tip!</h4>
-
-          <p>Add the layout-top-nav class to the body tag to get this layout. This feature can also be used with a
-            sidebar! So use this class if you want to remove the custom dropdown menus from the navbar and use regular
-            links instead.</p>
-        </div>
-        <div class="callout callout-danger">
-          <h4>Warning!</h4>
-
-          <p>The construction of this layout differs from the normal one. In other words, the HTML markup of the navbar
-            and the content will slightly differ than that of the normal layout.</p>
-        </div>
-        <div class="box box-default">
-          <div class="box-header with-border">
-            <h3 class="box-title">Blank Box</h3>
+        <div class="col-md-8">
+          <div class="box box-warning">
+              <div class="box-header with-border">
+                  <h3 class="box-title">Lorem Ipsum</h3>
+              </div>
+              <div class="box-body">
+                  <!-- The Modal -->
+                  <img id="myImg"  style="float:left; width:100%; max-width:200px; " src="https://i.postimg.cc/kG8nKrpT/slide-1.png">
+                  
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal">
+                      <!-- The Close Button -->
+                      <span class="close">&times;</span>
+                      <!-- Modal Content (The Image) -->
+                      <img class="modal-content" id="img01">
+                      <!-- Modal Caption (Image Text) -->
+                      <div id="caption"></div>
+                  </div>
+                  <p class="text-justify clearfix" style="margin: 0px 10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac viverra ligula, eget vestibulum enim. Aenean eleifend turpis urna, non mattis quam dapibus sed. Praesent quis eleifend magna. Proin et nunc neque. Vestibulum ullamcorper dui consectetur, aliquam metus at, aliquam risus. Duis ornare nibh in tincidunt mollis. Aliquam erat volutpat. Vestibulum vel massa sit amet lorem sollicitudin condimentum eu eget arcu. Vestibulum sed eros fermentum, sagittis erat vitae, luctus risus. Vestibulum id nisi in odio feugiat pulvinar quis eu velit. Fusce sit amet eros sit amet magna vehicula laoreet. Suspendisse id sodales arcu.
+                      Vestibulum placerat dictum felis a accumsan. Duis feugiat rutrum tellus quis eleifend. <a href="" class="btn btn-default btn-xs btn-round">Baca Selengkapnya</a></p>
+              </div>
+              <div class="box-footer">
+                  <small class="text-muted"> <i class="fa fa-clock-o"></i> {{ now('d m y')->translatedFormat('d F Y') }} </small>
+                  <small class="text-muted"><i class="fa fa-user-o fa-xs"></i> Administrator </small>
+                  <small class="text-muted"><i class="fa fa-comments-o"></i> 0 </small>
+                  <small class="text-muted"><i class="fa fa-eye"></i> 10 </small>
+                  
+                  <div class="pull-right text-muted">
+                      <button type="button" class="btn btn-primary btn-xs"><i class="fa fa-share"></i> Share</button>
+                      <button type="button" class="btn btn-primary btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+                  </div>
+              </div>
           </div>
-          <div class="box-body">
-            The great content goes here
-          </div>
-          <!-- /.box-body -->
+      </div>
+
+      <div class="col-md-4 col-sm-6" style="position: relative;">
+        <div class="box box-widget">
+          <div class="box-header text-center  with-border bg-blue">
+            <h2 class="box-title text-bold">SIKOMA</h2>
         </div>
-        <!-- /.box -->
+           <div class="pad text-bold bg-white" >
+            @include('sistem_komplain.komplain._tracking')
+        
+                    @include('sistem_komplain.komplain._komplain_populer')
+        
+                    @include('sistem_komplain.komplain._komplain_sukses')
+            </div>
+        <!-- /.col -->
+        </div>
+        <div class="box box-widget">
+          <div class="box-header with-border text-center  bg-blue">
+            <h2 class="box-title text-bold">AGENDA KEGIATAN</h2>
+        </div>
+        <br>
+            <ul class="timeline">
+                @if(count($events) > 0)
+                    @foreach($events as $key => $event)
+                        @foreach($event as $value)
+                        <li>
+                            <i class="fa fa-calendar @if($value->status=='OPEN') bg-maroon @else bg-gray @endif"></i>
+                            <div class="timeline-item">
+                                <h3 class="timeline-header"><a href="#">{{ strtoupper($value->event_name) }}</a></h3>
+                                <small class="text-yellow"><i class="fa fa-clock-o"></i> {{ Carbon\Carbon::parse($value->start)->translatedFormat('d F Y') }}</small>
+                            </div>
+                        </li>
+                        @endforeach
+                    @endforeach
+                @else
+                    <li class="time-label">
+                        <span class="bg-gray">
+                            Event tidak tersedia.
+                        </span>
+                    </li>
+                @endif
+                    {{-- <li>
+                        <i class="fa fa-clock-o bg-gray"></i>
+                    </li> --}}
+                </ul>
+        
+        </div>
+    
+        <div class="box box-widget">
+          <div class="box-header text-center  with-border bg-blue">
+            <h2 class="box-title text-bold">PENGUNJUNG</h2>
+        </div>
+           <div class="pad text-bold bg-white" >
+            <ul class="nav">
+                <li>Hari Ini <span class="pull-right badge bg-blue">{{ Counter::allVisitors(1) }} Kunjungan</span> </li>
+                <li>7 hari yang lalu <span class="pull-right badge bg-aqua">{{ Counter::allVisitors(7) }} Kunjungan</span> </li>
+                <li>Total <span class="pull-right badge bg-red">{{ Counter::allVisitors() }} Kunjungan</span> </li>
+              </ul>
+            </div>
+        <!-- /.col -->
+        </div>
+    </div>
+    
       </section>
       <!-- /.content -->
     </div>
