@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Top Navigation</title>
+  <title>Website | Kec. Binamu</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -220,22 +220,51 @@
 <div class="dk-line">
   <i class="fa fa-globe fa-lg"></i>
 </div>
+<div id="main-service" class="container">
+  <div class="col-md-3 col-sm-3">
+      <div class="service-item">
+          <!-- service-item-icon -->
+          <div class="service-item-icon">
+              <i class="fa fa-calendar"></i>
+          </div><!-- /service-item-icon -->
+          <!-- service-item-title -->
+          <h4><a href="#">Kegiatan</a></h4>
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-3">
+      <div class="service-item">
+          <!-- service-item-icon -->
+          <div class="service-item-icon">
+              <i class="fa fa-certificate"></i>
+          </div><!-- /service-item-icon -->
+          <!-- service-item-title -->
+          <h4><a href="#">Prestasi {{ $nama_wilayah }}</a></h4>
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-3">
+      <div class="service-item">
+          <!-- service-item-icon -->
+          <div class="service-item-icon">
+              <i class="fa fa-tree"></i>
+          </div><!-- /service-item-icon -->
+          <!-- service-item-title -->
+          <h4><a href="#">Wisata Ke {{ $nama_wilayah }}</a></h4>
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-3">
+      <div class="service-item">
+          <!-- service-item-icon -->
+          <div class="service-item-icon">
+              <i class="fa fa-map"></i>
+          </div><!-- /service-item-icon -->
+          <!-- service-item-title -->
+          <h4><a href="#">Lihat Di Peta </a></h4>
+      </div>
+  </div>
+</div>
   <!-- Full Width Column -->
   <div class="content-wrapper">
     <div class="container">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Top Navigation
-          <small>Example 2.0</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="#">Layout</a></li>
-          <li class="active">Top Navigation</li>
-        </ol>
-      </section>
-
       <!-- Main content -->
       <section class="content">
         <div class="callout callout-info">
@@ -342,5 +371,7 @@
 <script src="https://adminlte.io/themes/AdminLTE/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="https://adminlte.io/themes/AdminLTE/dist/js/demo.js"></script>
+<script src="custom.js"></script>
+
 </body>
 </html>
