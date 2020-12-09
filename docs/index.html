@@ -82,13 +82,13 @@
                 </ul>
               </li>
               <li class="col-md-4 col-sm-4">
-                <h4 class="text-bold text-center">Sambutan Kepala {{ $sebutan_wilayah }} {{ $nama_wilayah }}</h4> Alhamdulillahhirobbilalamin
-                <p style="text-align:justify;font-size:12px;"> Dengan mengucapkan puji dan syukur kehadirat Allah SWT, kami sampaikan salam hangat bagi warga {{ $sebutan_wilayah }} {{ $nama_wilayah }}. Selanjutnya dengan senang hati kami sampaikan informasi kepada Anda untuk mengenal lebih dekat {{ $sebutan_wilayah }} {{ $nama_wilayah }} melalui situs resmi {{ $sebutan_wilayah }} {{ $nama_wilayah }} ini. Situs ini diharapkan akan memberikan informasi mengenai {{ $sebutan_wilayah }} {{ $nama_wilayah }} secara umum tentang pemerintahan, pembangunan dan kemasyarakatan, termasuk didalamnya, khasanah budaya, potensi ekonomi dan pariwisata, yang selalanjutnya dapat digunakan dinas instansi terkait dan stakeholder lainnya dalam rangka pelaksanaan program-progam pembangunan di {{ $sebutan_wilayah }} {{ $nama_wilayah }} untuk meningkatkan kesejahteraan masyarakat. </p>
+                <h4 class="text-bold text-center">Sambutan Kepala Kecamatan Binamu</h4> Alhamdulillahhirobbilalamin
+                <p style="text-align:justify;font-size:12px;"> Dengan mengucapkan puji dan syukur kehadirat Allah SWT, kami sampaikan salam hangat bagi warga Kecamatan Binamu. Selanjutnya dengan senang hati kami sampaikan informasi kepada Anda untuk mengenal lebih dekat Kecamatan Binamu melalui situs resmi Kecamatan Binamu ini. Situs ini diharapkan akan memberikan informasi mengenai Kecamatan Binamu secara umum tentang pemerintahan, pembangunan dan kemasyarakatan, termasuk didalamnya, khasanah budaya, potensi ekonomi dan pariwisata, yang selalanjutnya dapat digunakan dinas instansi terkait dan stakeholder lainnya dalam rangka pelaksanaan program-progam pembangunan di Kecamatan Binamu untuk meningkatkan kesejahteraan masyarakat. </p>
               </li>
               <li class="col-md-4 col-sm-3 text-center">
                 <img src="https://adminlte.io/themes/AdminLTE/dist/img/user1-128x128.jpg" width="200px" class="img-user">
-                <h6 class="text-bold no-padding">{{ $profil_wilayah->nama_camat }}</h6>
-                <h6>Kepala {{ $sebutan_wilayah }} {{ $nama_wilayah }} </h6>
+                <h6 class="text-bold no-padding">G A A 1 9 X X</h6>
+                <h6>Kepala Kecamatan Binamu </h6>
               </li>
               <li style="margin-left:-50px" class="col-sm-3"></li>
             </ul>
@@ -97,44 +97,50 @@
           {{-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">PUBLIKASI <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#">BERITA KECAMATAN</a></li>
+                <li><a href="#">BERITA DESA</a></li>
+                <li><a href="#">DOKUMENTASI PROGRAM KERJA</a></li>
               </ul>
           </li> --}}
-          <li class="dropdown @if(Request::is('desa-*'))active @endif">
+          <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">DESA <span class="caret"></span></a>
             <ul class="dropdown-menu fadeIn animated" role="menu">
-              @foreach ($navdesa as $d)  
-              <li><a href="{{ route('desa.show', ['slug' => str_slug(strtolower($d->nama))]) }}">{{ 'Desa ' .ucfirst($d->nama) }}</a></li>
-              @endforeach
+             
+              <li><a href="">Desa Sapanang</a></li>
+              <li><a href="">Kelurahan Empoang</a></li>
+              <li><a href="">Kelurahan Empoang Selatan</a></li>
+              <li><a href="">Kelurahan Empoang Utara</a></li>
+              <li><a href="">Kelurahan Sidenre</a></li>
+              
               </ul>
           </li>
-          <li class="dropdown @if(Request::is('potensi*'))active @endif">
+          <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">POTENSI <span class="caret"></span></a>
             <ul class="dropdown-menu fadeIn animated" role="menu">
-              @foreach ($navpotensi as $d)  
-              <li><a href="{{ route('potensi.kategori', ['slug'=>$d->slug]) }}">{{ ucfirst($d->nama_kategori) }}</a></li>
-              @endforeach
+              <li><a href="">Potensi Bidang Pendidikan</a></li>
+              <li><a href="">Potensi Bidang Pertanian</a></li>
+              <li><a href="">Potensi Bidang Pariwisata</a></li>
+              <li><a href="">Potensi Bidang Perikanan</a></li>
+              <li><a href="">Potensi Bidang Pertanian</a></li>
               </ul>
           </li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">STATISTIK <span class="caret"></span></a>
             <ul class="dropdown-menu fadeIn animated" role="menu">
-                <li><a href="{{ route('statistik.kependudukan') }}">Penduduk</a></li>
-                <li><a href="{{ route('statistik.pendidikan') }}">Pendidikan</a></li>
-                <li><a href="{{ route('statistik.kesehatan') }}">Kesehatan</a></li>
-                <li><a href="{{ route('statistik.program-bantuan') }}">Program dan Bantuan</a></li>
-                <li><a href="{{ route('statistik.anggaran-dan-realisasi') }}">Anggaran dan Realisasi</a></li>
-                <li><a href="{{ route('statistik.anggaran-desa') }}">Anggaran Desa</a></li>
+                <li><a href="">Penduduk</a></li>
+                <li><a href="">Pendidikan</a></li>
+                <li><a href="">Kesehatan</a></li>
+                <li><a href="">Program dan Bantuan</a></li>
+                <li><a href="">Anggaran dan Realisasi</a></li>
+                <li><a href="">Anggaran Desa</a></li>
               </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">UNDUHAN <span class="caret"></span></a>
           <ul class="dropdown-menu fadeIn animated" role="menu">
-              <li><a href="{{ route('unduhan.prosedur') }}">Prosedur</a></li>
-              <li><a href="{{ route('unduhan.regulasi') }}">Regulasi</a></li>
-              <li><a href="{{ route('unduhan.form-dokumen') }}">Dokumen</a></li>
+              <li><a href="">Prosedur</a></li>
+              <li><a href="">Regulasi</a></li>
+              <li><a href="">Dokumen</a></li>
             </ul>
         </li>
         </ul>
@@ -144,57 +150,6 @@
           </div>
         </form> 
       </div>
-      <!-- /.navbar-collapse -->
-      <!-- Navbar Right Menu -->
-      {{-- <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- User Account Menu -->
-          @if (Sentinel::guest())
-          <li class="dropdown user user-menu">
-          <!-- Menu Toggle Button -->
-            <a href="{{ route('login') }}" class="dropdown-toggle">
-              <img src="{{ asset('/img/login.png')}}" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{ __('Login') }}</span>
-          </a>
-            @else
-                @php
-                    $user = Sentinel::getUser();
-                @endphp  
-          <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ asset("/img/login.png")}}" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{ $user->first_name}}</span>
-              </a>
-            <ul class="dropdown-menu">  
-              <!-- The user image in the menu -->
-              <li class="user-header">
-                <img src="{{ asset("/img/login.png")}}" class="img-circle" alt="User Image">
-                <p>
-                  {{ $user->first_name .' '.$user->last_name }}
-                  <small>Member since {{ date('M, Y', strtotime($user->created_at)) }}</small>
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a class="btn btn-default btn-flat" href="{{ route('logout') }}" onclick="">
-                   {{ __('Logout') }}
-               </a>
-               <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                     style="display: none;">
-                     @csrf
-               </form>
-                </div>
-              </li>
-            </ul>
-             @endif
-          </li>
-        </ul>
-      </div> --}}
-      <!-- /.navbar-custom-menu -->
     </div>
     <!-- /.container-fluid -->
   </nav>
